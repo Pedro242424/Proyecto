@@ -1,24 +1,29 @@
 <resources>
-    <!-- CREDENDIALES APLICATIVOS -->
-    <string name="app_name">Proyecto</string>
-    <string name="developer"> Pedro blanco </string>
-    <string name="Desarrollo">desarrolado por: </string>
-    <string name="version"> version 1.0.0</string>
+    <!-- Aplicación -->
+    <string name="app_name">A Mi Pizza</string>
+    <string name="developer">Pedro Blanco</string>
+    <string name="version">Version 1.0.0</string>
 
+    <!-- Login -->
+    <string name="login_title">Bienvenido a A Mi Pizza</string>
+    <string name="login_subtitle">Inicia sesión para continuar</string>
+    <string name="hint_email">Correo Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="btn_register">Registrarse</string>
 
-    <!-- LOGIN -->
-    <string name="titulo_login">Ingrese sesion</string>
-    <string name="lbl_usuario">Usuario</string>
-    <string name="txt_usuario">Ingrese Usuario</string>
-    <string name="lbl_password">Contraseña</string>
-    <string name="txt_password">Ingrese contraseña</string>
-    <string name="btn_ingrear">Ingresar</string>
-    <string name="lbl_crear_cuenta">No tienes cuenta?, Registrate</string>
+    <!-- Registro -->
+    <string name="register_title">Registro de Usuario</string>
+    <string name="hint_user_id">ID del usuario</string>
+    <string name="hint_name">Nombre del usuario</string>
+    <string name="hint_lastname">Apellidos del usuario</string>
+    <string name="hint_user_email">Correo del usuario</string>
+    <string name="hint_username">Usuario</string>
+    <string name="btn_confirm_register">Registrarse</string>
 
-
-    <!-- REGISTRO -->
-
-    <!-- ELECCION -->
-
-    <!-- MAS DATOS -->
+    <!-- Mensajes -->
+    <string name="msg_fill_all">Por favor llena todos los campos</string>
+    <string name="msg_registered">Registro exitoso</string>
+    <string name="msg_login_success">Inicio de sesión exitoso</string>
+    <string name="msg_login_error">Correo incorrecto o no registrado</string>
 </resources>

@@ -1,29 +1,23 @@
 package mx.itson.proyecto;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Paint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText etCorreo;
-    private EditText edContrasenia;
-    private Button btnIniciar;
 
-    private TextView btnRegistro;
+    private EditText etCorreo, edContrasenia;
+    private Button btnIniciar, btnRegistro;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         etCorreo = findViewById(R.id.etCorreo);
@@ -31,26 +25,23 @@ public class MainActivity extends AppCompatActivity {
         btnIniciar = findViewById(R.id.btnIniciar);
         btnRegistro = findViewById(R.id.btnRegistro);
 
-        btnIniciar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String correo = etCorreo.getText().toString();
-                String saludo = "Hola " + correo;
-                Toast.makeText(MainActivity.this, saludo, Toast.LENGTH_LONG).show();
+        btnIniciar.setOnClickListener(view -> {
+            String correo = etCorreo.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                intent.putExtra("CORREO", correo);
-                startActivity(intent);
+            SharedPreferences prefs = getSharedPreferences("datos_usuario", Context.MODE_PRIVATE);
+            String correoRegistrado = prefs.getString("correo", "");
+
+            if (correo.equals(correoRegistrado)) {
+                Toast.makeText(this, getString(R.string.msg_login_success), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, MenuActivity.class));
+                finish();
+            } else {
+                Toast.makeText(this, getString(R.string.msg_login_error), Toast.LENGTH_SHORT).show();
             }
         });
 
-        btnRegistro.setPaintFlags(btnRegistro.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        btnRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
-                startActivity(intent);
-            }
+        btnRegistro.setOnClickListener(view -> {
+            startActivity(new Intent(this, RegistroActivity.class));
         });
     }
 }
