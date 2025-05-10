@@ -59,12 +59,15 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
+
         <Button
+            android:id="@+id/btnVerPedido1"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#6B8E23"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
+
       </LinearLayout>
 
 
@@ -84,12 +87,15 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
+
         <Button
+            android:id="@+id/btnVerPedido2"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#6B8E23"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
+
       </LinearLayout>
 
 
@@ -109,12 +115,15 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
+
         <Button
+            android:id="@+id/btnVerPedido3"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#6B8E23"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
+
       </LinearLayout>
 
 
@@ -134,12 +143,15 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
+
         <Button
+            android:id="@+id/btnVerPedido4"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#6B8E23"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
+
       </LinearLayout>
 
 
@@ -159,12 +171,15 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
+
         <Button
+            android:id="@+id/btnVerPedido5"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#6B8E23"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
+
       </LinearLayout>
 
 
@@ -184,24 +199,29 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
+
         <Button
+            android:id="@+id/btnVerPedido6"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#6B8E23"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
+
       </LinearLayout>
 
 
       <!-- Puedes copiar y modificar este bloque para Pedido2 a Pedido5 -->
 
       <Button
+          android:id="@+id/btnCancelarPedido"
           android:layout_marginTop="16dp"
           android:text="Cancelar pedido"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:backgroundTint="#B22222"
           android:textColor="#FFFFFF"/>
+
     </LinearLayout>
   </ScrollView>
 
