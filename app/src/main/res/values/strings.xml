@@ -18,7 +18,7 @@
     <string name="hint_name">Nombre del usuario</string>
     <string name="hint_lastname">Apellidos del usuario</string>
     <string name="hint_user_email">Correo del usuario</string>
-    <string name="hint_username">Usuario</string>
+    <string name="hint_username">Contraseña</string>
     <string name="btn_confirm_register">Registrarse</string>
 
     <!-- Mensajes -->

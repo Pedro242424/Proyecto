@@ -1,20 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MenuActivity">
+    android:background="#F5F1E7">
 
-  <TextView
-      android:text="Hola correo"
-      android:id="@+id/tvCorreo"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
+  <!-- Franja verde superior -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      android:gravity="center_vertical"
+      android:background="#6B8E23"
+      android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Logo"
+        android:layout_marginEnd="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Mi Pizza"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+  </LinearLayout>
+
+  <!-- Contenido principal -->
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Pedido1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+        <Button
+            android:text="Ver pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6B8E23"
+            android:textColor="#FFFFFF"/>
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Pedido2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+        <Button
+            android:text="Ver pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6B8E23"
+            android:textColor="#FFFFFF"/>
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Pedido3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+        <Button
+            android:text="Ver pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6B8E23"
+            android:textColor="#FFFFFF"/>
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Pedido4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+        <Button
+            android:text="Ver pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6B8E23"
+            android:textColor="#FFFFFF"/>
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Pedido5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+        <Button
+            android:text="Ver pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6B8E23"
+            android:textColor="#FFFFFF"/>
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Pedido6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#444444" />
+
+        <Button
+            android:text="Ver pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6B8E23"
+            android:textColor="#FFFFFF"/>
+      </LinearLayout>
+
+
+      <!-- Puedes copiar y modificar este bloque para Pedido2 a Pedido5 -->
+
+      <Button
+          android:layout_marginTop="16dp"
+          android:text="Cancelar pedido"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#B22222"
+          android:textColor="#FFFFFF"/>
+    </LinearLayout>
+  </ScrollView>
+
+  <!-- Franja verde inferior -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      android:background="#6B8E23"
+      android:gravity="center"
+      android:weightSum="3">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="A Mi Pizza"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Mi perfil"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+  </LinearLayout>
 </LinearLayout>
