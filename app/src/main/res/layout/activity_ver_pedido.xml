@@ -10,22 +10,22 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Título -->
+        <!-- Nombre y dirección -->
         <TextView
+            android:id="@+id/txtNombreCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Deseas eliminar este pedido? :c"
-            android:textSize="18sp"
+            android:text="Cliente: Juan Pérez"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:layout_marginBottom="4dp" />
 
-        <!-- Detalle del pedido -->
         <TextView
+            android:id="@+id/txtDireccionCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Orden 3"
-            android:layout_marginTop="16dp"
-            android:textStyle="bold" />
+            android:text="Dirección: Calle Falsa 123"
+            android:layout_marginBottom="16dp" />
 
         <!-- Pizza Personalizada Expandible -->
         <LinearLayout
@@ -43,7 +43,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pizza personalizada (2)"
+                android:text="Pizza personalizada (1)"
                 android:textStyle="bold"
                 android:textSize="16sp" />
 
@@ -55,7 +55,7 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
-        <!-- Contenido Expandible (inicia oculto) -->
+        <!-- Contenido Expandible -->
         <LinearLayout
             android:id="@+id/contenido_pizza_personalizada"
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ingredientes: Jamón, piña" />
+                android:text="Ingredientes: Jamón, Piña, Extra queso" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,37 +81,30 @@
                 android:text="Complementos: Refresco" />
         </LinearLayout>
 
-        <!-- Pizza de menú -->
+        <!-- Otra pizza del menú -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pizza de Peperoni (1)"
-            android:layout_marginTop="8dp" />
+            android:text="Pizza de Peperoni (1)\nTamaño: Mediana"
+            android:layout_marginTop="16dp" />
 
-        <!-- Botones -->
-        <LinearLayout
+        <!-- Costo total -->
+        <TextView
+            android:id="@+id/txtCostoTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="24dp">
+            android:text="Costo total: $280.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:gravity="end" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Eliminar" />
-
-            <View
-                android:layout_width="16dp"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cancelar" />
-        </LinearLayout>
-
+        <!-- Botón Terminar Orden -->
+        <Button
+            android:id="@+id/btnTerminarOrden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terminar orden"
+            android:layout_marginTop="32dp" />
     </LinearLayout>
 </ScrollView>
