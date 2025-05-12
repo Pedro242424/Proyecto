@@ -15,7 +15,7 @@ import mx.itson.proyecto.db.DbHelper;
 public class MainActivity extends AppCompatActivity {
 
     private EditText etCorreo, edContrasenia;
-    private Button btnIniciar, btnRegistro;
+    private Button btnIniciar, btnRegistro, btnCrear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         edContrasenia = findViewById(R.id.edContrasenia);
         btnIniciar = findViewById(R.id.btnIniciar);
         btnRegistro = findViewById(R.id.btnRegistro);
+        btnCrear = findViewById(R.id.btnCrear); // <- Agregamos el botón de crear BD
 
         btnIniciar.setOnClickListener(view -> {
             String correo = etCorreo.getText().toString();
@@ -58,6 +59,17 @@ public class MainActivity extends AppCompatActivity {
 
         btnRegistro.setOnClickListener(view -> {
             startActivity(new Intent(this, RegistroActivity.class));
+        });
+
+        btnCrear.setOnClickListener(view -> {
+            DbHelper dbHelper = new DbHelper(this);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            if (db != null) {
+                Toast.makeText(this, "Base de datos creada correctamente", Toast.LENGTH_SHORT).show();
+                db.close();
+            } else {
+                Toast.makeText(this, "Error al crear la base de datos", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
