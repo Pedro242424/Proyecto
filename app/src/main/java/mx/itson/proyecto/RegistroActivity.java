@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,38 +31,49 @@ public class RegistroActivity extends AppCompatActivity {
         btnIniciar = findViewById(R.id.btnIniciar);
 
         btnIniciar.setOnClickListener(v -> {
-            String id = edID.getText().toString();
-            String nombre = edNombres.getText().toString();
-            String apellidos = edApellidos.getText().toString();
-            String correo = edCorreo.getText().toString();
-            String contrasena = edUsuario.getText().toString();
+            String id = edID.getText().toString().trim();
+            String nombre = edNombres.getText().toString().trim();
+            String apellidos = edApellidos.getText().toString().trim();
+            String correo = edCorreo.getText().toString().trim();
+            String contrasena = edUsuario.getText().toString().trim();
 
             if (id.isEmpty() || nombre.isEmpty() || apellidos.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
                 Toast.makeText(this, getString(R.string.msg_fill_all), Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            DbHelper dbHelper = new DbHelper(this);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            try {
+                int idInt = Integer.parseInt(id);
 
-            ContentValues values = new ContentValues();
-            values.put("id", Integer.parseInt(id));
-            values.put("nombre", nombre);
-            values.put("apellidos", apellidos);
-            values.put("correo", correo);
-            values.put("contrasena", contrasena);
+                DbHelper dbHelper = new DbHelper(this);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            long result = db.insert("usuarios", null, values);
+                ContentValues values = new ContentValues();
+                values.put("id", idInt);
+                values.put("nombre", nombre);
+                values.put("apellidos", apellidos);
+                values.put("correo", correo);
+                values.put("contrasena", contrasena);
 
-            if (result != -1) {
-                Toast.makeText(this, getString(R.string.msg_registered), Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, MainActivity.class));
-                finish();
-            } else {
-                Toast.makeText(this, "Error al registrar usuario", Toast.LENGTH_SHORT).show();
+                long result = db.insert("usuarios", null, values);
+
+                if (result != -1) {
+                    Toast.makeText(this, getString(R.string.msg_registered), Toast.LENGTH_SHORT).show();
+                    Log.d("Registro", "Usuario insertado con ID SQLite: " + result);
+                    startActivity(new Intent(this, MainActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(this, "Error al registrar usuario (¿ID duplicado?)", Toast.LENGTH_LONG).show();
+                    Log.e("Registro", "Fallo en la inserción");
+                }
+
+                db.close();
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "ID inválido", Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                Toast.makeText(this, "Error inesperado: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("Registro", "Excepción: ", e);
             }
-
-            db.close();
         });
     }
 }
