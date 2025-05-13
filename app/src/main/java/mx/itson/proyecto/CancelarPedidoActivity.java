@@ -1,36 +1,45 @@
 package mx.itson.proyecto;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import mx.itson.proyecto.Pedido;
+import mx.itson.proyecto.PedidoManager;
 
 public class CancelarPedidoActivity extends AppCompatActivity {
+
+    TextView txtDetallePedido;
+    Button btnEliminar, btnCancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancelar_pedido);
 
-        Button btnEliminar = findViewById(R.id.btnEliminar);
-        Button btnCancelar = findViewById(R.id.btnCancelar);
+        btnEliminar = findViewById(R.id.btnEliminar);
+        btnCancelar = findViewById(R.id.btnCancelar);
 
+        // Aquí deberías asignar un pedido seleccionado, por ejemplo, el primer pedido.
+        // Simulamos que el pedido es el primero de la lista:
+        Pedido pedidoSeleccionado = PedidoManager.pedidos.get(0);  // Asume que seleccionas el primero
+        txtDetallePedido.setText(pedidoSeleccionado.toString());
+
+        // Eliminar
         btnEliminar.setOnClickListener(v -> {
-            Toast.makeText(this, "Pedido eliminado.", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MenuActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
+            if (PedidoManager.pedidos.size() > 0) {
+                // Eliminar el primer pedido o el seleccionado
+                PedidoManager.eliminarPedido(0);  // Asumiendo que el pedido a eliminar es el primero
+                Toast.makeText(this, "Pedido eliminado.", Toast.LENGTH_SHORT).show();
+
+                // Después de eliminar, cerrar la actividad
+                finish();
+            } else {
+                Toast.makeText(this, "No hay pedidos para eliminar.", Toast.LENGTH_SHORT).show();
+            }
         });
 
-        btnCancelar.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MenuActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-        });
+        // Cancelar
+        btnCancelar.setOnClickListener(v -> finish());
     }
 }

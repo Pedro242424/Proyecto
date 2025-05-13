@@ -13,7 +13,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Botones de ver pedido
+        // Botones "Ver pedido"
         Button btnVerPedido1 = findViewById(R.id.btnVerPedido1);
         Button btnVerPedido2 = findViewById(R.id.btnVerPedido2);
         Button btnVerPedido3 = findViewById(R.id.btnVerPedido3);
@@ -21,12 +21,19 @@ public class MenuActivity extends AppCompatActivity {
         Button btnVerPedido5 = findViewById(R.id.btnVerPedido5);
         Button btnVerPedido6 = findViewById(R.id.btnVerPedido6);
 
-        // Botón de cancelar pedido
-        Button btnCancelarPedido = findViewById(R.id.btnCancelarPedido);
+        // Botones "Eliminar pedido"
+        Button btnEliminarPedido1 = findViewById(R.id.btnEliminarPedido1);
+        Button btnEliminarPedido2 = findViewById(R.id.btnEliminarPedido2);
+        Button btnEliminarPedido3 = findViewById(R.id.btnEliminarPedido3);
+        Button btnEliminarPedido4 = findViewById(R.id.btnEliminarPedido4);
+        Button btnEliminarPedido5 = findViewById(R.id.btnEliminarPedido5);
+        Button btnEliminarPedido6 = findViewById(R.id.btnEliminarPedido6);
 
-        // Mismo intent para todos los pedidos, puedes personalizarlo si necesitas mostrar detalles distintos
+        // Listener genérico para ver pedidos
         View.OnClickListener verPedidoListener = v -> {
             Intent intent = new Intent(MenuActivity.this, VerPedidoActivity.class);
+            // Puedes usar extras si deseas enviar el número de pedido
+            // intent.putExtra("pedidoIndex", 0);
             startActivity(intent);
         };
 
@@ -37,10 +44,18 @@ public class MenuActivity extends AppCompatActivity {
         btnVerPedido5.setOnClickListener(verPedidoListener);
         btnVerPedido6.setOnClickListener(verPedidoListener);
 
-        // Cancelar pedido
-        btnCancelarPedido.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuActivity.this, CancelarPedidoActivity.class);
-            startActivity(intent);
-        });
+        // Listener genérico para eliminar pedidos
+        btnEliminarPedido1.setOnClickListener(v -> eliminarPedido(0));
+        btnEliminarPedido2.setOnClickListener(v -> eliminarPedido(1));
+        btnEliminarPedido3.setOnClickListener(v -> eliminarPedido(2));
+        btnEliminarPedido4.setOnClickListener(v -> eliminarPedido(3));
+        btnEliminarPedido5.setOnClickListener(v -> eliminarPedido(4));
+        btnEliminarPedido6.setOnClickListener(v -> eliminarPedido(5));
+    }
+
+    private void eliminarPedido(int index) {
+        Intent intent = new Intent(MenuActivity.this, CancelarPedidoActivity.class);
+        intent.putExtra("pedidoIndex", index);
+        startActivity(intent);
     }
 }

@@ -59,16 +59,24 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
-
         <Button
             android:id="@+id/btnVerPedido1"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="#6B8E23"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEliminarPedido1"
+            android:text="Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B22222"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
+
 
 
       <LinearLayout
@@ -79,23 +87,30 @@
           android:layout_marginBottom="8dp">
 
         <TextView
-            android:text="Pedido2"
+            android:text="Pedido1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#444444" />
-
 
         <Button
             android:id="@+id/btnVerPedido2"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="#6B8E23"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEliminarPedido2"
+            android:text="Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B22222"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
 
 
@@ -107,23 +122,30 @@
           android:layout_marginBottom="8dp">
 
         <TextView
-            android:text="Pedido3"
+            android:text="Pedido1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#444444" />
-
 
         <Button
             android:id="@+id/btnVerPedido3"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="#6B8E23"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEliminarPedido3"
+            android:text="Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B22222"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
 
 
@@ -135,23 +157,30 @@
           android:layout_marginBottom="8dp">
 
         <TextView
-            android:text="Pedido4"
+            android:text="Pedido1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#444444" />
-
 
         <Button
             android:id="@+id/btnVerPedido4"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="#6B8E23"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEliminarPedido4"
+            android:text="Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B22222"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
 
 
@@ -163,23 +192,30 @@
           android:layout_marginBottom="8dp">
 
         <TextView
-            android:text="Pedido5"
+            android:text="Pedido1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#444444" />
-
 
         <Button
             android:id="@+id/btnVerPedido5"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="#6B8E23"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEliminarPedido5"
+            android:text="Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B22222"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
 
 
@@ -191,7 +227,7 @@
           android:layout_marginBottom="8dp">
 
         <TextView
-            android:text="Pedido6"
+            android:text="Pedido1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -199,28 +235,28 @@
             android:textStyle="bold"
             android:textColor="#444444" />
 
-
         <Button
             android:id="@+id/btnVerPedido6"
             android:text="Ver pedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="#6B8E23"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEliminarPedido6"
+            android:text="Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B22222"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
 
 
       <!-- Puedes copiar y modificar este bloque para Pedido2 a Pedido5 -->
 
-      <Button
-          android:id="@+id/btnCancelarPedido"
-          android:layout_marginTop="16dp"
-          android:text="Cancelar pedido"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:backgroundTint="#B22222"
-          android:textColor="#FFFFFF"/>
+
 
     </LinearLayout>
   </ScrollView>
