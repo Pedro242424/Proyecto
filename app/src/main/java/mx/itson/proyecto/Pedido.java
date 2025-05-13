@@ -1,42 +1,23 @@
 package mx.itson.proyecto;
 
-import java.util.List;
-
 public class Pedido {
+    public String nombreCliente;
+    public String direccion;
+    public String tamanoPersonalizada;
+    public String ingredientes;
+    public String complementos;
+    public String pizzaMenu;
+    public String tamanoPizzaMenu;
+    public double costoTotal;
 
-    private String tipoPizza; // Ej: "Pizza Personalizada" o "Pizza de Menú"
-    private String tamano;
-    private List<String> ingredientes;
-    private List<String> complementos;
-
-    public Pedido(String tipoPizza, String tamano, List<String> ingredientes, List<String> complementos) {
-        this.tipoPizza = tipoPizza;
-        this.tamano = tamano;
+    public Pedido(String nombreCliente, String direccion, String tamanoPersonalizada, String ingredientes, String complementos, String pizzaMenu, String tamanoPizzaMenu, double costoTotal) {
+        this.nombreCliente = nombreCliente;
+        this.direccion = direccion;
+        this.tamanoPersonalizada = tamanoPersonalizada;
         this.ingredientes = ingredientes;
         this.complementos = complementos;
-    }
-
-    public String getTipoPizza() {
-        return tipoPizza;
-    }
-
-    public String getTamano() {
-        return tamano;
-    }
-
-    public List<String> getIngredientes() {
-        return ingredientes;
-    }
-
-    public List<String> getComplementos() {
-        return complementos;
-    }
-
-    @Override
-    public String toString() {
-        return tipoPizza + "\n" +
-                "Tamaño: " + tamano + "\n" +
-                "Ingredientes: " + String.join(", ", ingredientes) + "\n" +
-                "Complementos: " + String.join(", ", complementos);
+        this.pizzaMenu = pizzaMenu;
+        this.tamanoPizzaMenu = tamanoPizzaMenu;
+        this.costoTotal = costoTotal;
     }
 }

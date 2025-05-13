@@ -66,16 +66,19 @@
             android:paddingBottom="12dp">
 
             <TextView
+                android:id="@+id/txtTamano"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tamaño: Grande" />
 
             <TextView
+                android:id="@+id/txtIngredientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ingredientes: Jamón, Piña, Extra queso" />
 
             <TextView
+                android:id="@+id/txtComplementos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Complementos: Refresco" />
@@ -83,6 +86,7 @@
 
         <!-- Otra pizza del menú -->
         <TextView
+            android:id="@+id/txtOtraPizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pizza de Peperoni (1)\nTamaño: Mediana"

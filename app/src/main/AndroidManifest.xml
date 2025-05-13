@@ -13,9 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
-        <activity
-            android:name=".PedidoActivity"
-            android:exported="false" />
+
         <activity
             android:name=".CancelarPedidoActivity"
             android:exported="false" />
